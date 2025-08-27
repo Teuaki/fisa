@@ -1,7 +1,7 @@
 app_name = "my_app"
 app_title = "FISA Booking Online"
 app_publisher = "Joseph Tokai"
-app_description = "Ticket Booking online for \'Otuanga\'ofa"
+app_description = "Ticket booking online "
 app_email = "teuakitokai@gmail.com"
 app_license = "mit"
 

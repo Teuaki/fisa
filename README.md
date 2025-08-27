@@ -1,6 +1,6 @@
 ### FISA Booking Online
 
-Ticket Booking online for \'Otuanga\'ofa
+Ticket booking online 
 
 ### Installation
 
