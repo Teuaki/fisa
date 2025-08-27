@@ -1,7 +1,7 @@
 app_name = "my_app"
-app_title = "FISA Booking Online"
+app_title = "FISA "
 app_publisher = "Joseph Tokai"
-app_description = "Ticket booking online "
+app_description = "FISA Booking Online System"
 app_email = "teuakitokai@gmail.com"
 app_license = "mit"
 
@@ -15,7 +15,7 @@ app_license = "mit"
 # 	{
 # 		"name": "my_app",
 # 		"logo": "/assets/my_app/logo.png",
-# 		"title": "FISA Booking Online",
+# 		"title": "FISA ",
 # 		"route": "/my_app",
 # 		"has_permission": "my_app.api.permission.has_app_permission"
 # 	}

@@ -3,7 +3,7 @@ name = "my_app"
 authors = [
     { name = "Joseph Tokai", email = "teuakitokai@gmail.com"}
 ]
-description = "Ticket booking online "
+description = "FISA Booking Online System"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
