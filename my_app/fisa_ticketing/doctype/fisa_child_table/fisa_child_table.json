@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-16 02:31:43.717640",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_x04x",
+  "full_name",
+  "dob",
+  "category",
+  "ticket_type",
+  "departure_port",
+  "arrival_port",
+  "ticket_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_x04x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "DOB"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Infant\nChild\nAdult\nSenior"
+  },
+  {
+   "fieldname": "ticket_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ticket Type",
+   "options": "VIP\nEconomy"
+  },
+  {
+   "fieldname": "departure_port",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Departure Port",
+   "options": "Nuku'alofa\nNomuka\nHa'afeva\nPangai\nVava'u"
+  },
+  {
+   "fieldname": "arrival_port",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Arrival Port",
+   "options": "Nuku'alofa\nNomuka\nHa'afeva\nPangai\nVava'u"
+  },
+  {
+   "fieldname": "ticket_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Ticket Price"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-18 14:43:29.576809",
+ "modified_by": "Administrator",
+ "module": "FISA Ticketing",
+ "name": "FISA Child-table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

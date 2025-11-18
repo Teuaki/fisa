@@ -1,0 +1,289 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-21 00:17:44.867200",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "section_break",
+  "column_break",
+  "client_name",
+  "last_name",
+  "dob",
+  "phone_number",
+  "email",
+  "gender",
+  "column_break_",
+  "total_passengers",
+  "ticket_type",
+  "category",
+  "travel_date",
+  "departure_port",
+  "arrival_port",
+  "column_break_vqle",
+  "ticket_price",
+  "payment_status",
+  "total_amount",
+  "naming_series",
+  "customer_id",
+  "remaining_seats",
+  "payment_token",
+  "card_number",
+  "expirre_date",
+  "cvv_cvc",
+  "cardholder_name",
+  "section_break_lvfk",
+  "add_new_passenger"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "section_break",
+   "fieldtype": "Section Break",
+   "label": "Booking Detail"
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break",
+   "label": "Client Detail"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "First Name",
+   "options": "Or link to Customer doctype",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date Of Birth",
+   "options": "For discount logic",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "options": "Passenger contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "column_break_",
+   "fieldtype": "Column Break",
+   "label": "Ticket Detail"
+  },
+  {
+   "fieldname": "total_passengers",
+   "fieldtype": "Int",
+   "label": "Total Passengers",
+   "options": "System calculates based on child table"
+  },
+  {
+   "fieldname": "ticket_type",
+   "fieldtype": "Select",
+   "label": "Ticket Type",
+   "options": "VIP\nEconomy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Infant\nChild\nAdult\nSenior",
+   "reqd": 1
+  },
+  {
+   "fieldname": "travel_date",
+   "fieldtype": "Date",
+   "label": "Travel Date",
+   "options": "Required",
+   "reqd": 1
+  },
+  {
+   "fieldname": "departure_port",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Departure Port",
+   "options": "Nuku'alofa\nNomuka\nHa'afeva\nPangai\nVava'u",
+   "reqd": 1
+  },
+  {
+   "fieldname": "arrival_port",
+   "fieldtype": "Select",
+   "label": "Arrival Port",
+   "options": "Nuku'alofa\nNomuka\nHa'afeva\nPangai\nVava'u",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vqle",
+   "fieldtype": "Column Break",
+   "label": "Payment Detail"
+  },
+  {
+   "fieldname": "ticket_price",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Ticket Price",
+   "options": "Auto-calculated"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Status",
+   "options": "Draft\nConfirmed\nCancelled"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Total Amount",
+   "options": "Auto-calculated"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Series",
+   "options": "FISA.-.YY.MM.#####",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Attach Image",
+   "label": "National ID/Passport"
+  },
+  {
+   "fieldname": "remaining_seats",
+   "fieldtype": "Int",
+   "in_preview": 1,
+   "label": "Remaining Seats",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_token",
+   "fieldtype": "Data",
+   "label": "Payment Token",
+   "read_only": 1
+  },
+  {
+   "fieldname": "card_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Card Number"
+  },
+  {
+   "fieldname": "expirre_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expire Date"
+  },
+  {
+   "fieldname": "cvv_cvc",
+   "fieldtype": "Int",
+   "label": "CVV or CVC"
+  },
+  {
+   "fieldname": "cardholder_name",
+   "fieldtype": "Data",
+   "label": "Cardholder Name"
+  },
+  {
+   "fieldname": "section_break_lvfk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add_new_passenger",
+   "fieldtype": "Table",
+   "label": "Add New Passenger",
+   "options": "FISA Child-table"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 14:51:05.156107",
+ "modified_by": "Administrator",
+ "module": "FISA Ticketing",
+ "name": "FISA Booking Online",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

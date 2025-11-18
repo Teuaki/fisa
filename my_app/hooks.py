@@ -5,6 +5,7 @@ app_description = "FISA Booking Online System"
 app_email = "teuakitokai@gmail.com"
 app_license = "mit"
 
+
 # Apps
 # ------------------
 

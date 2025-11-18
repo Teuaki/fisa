@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-03 19:31:02.918888",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_nwhs",
+  "customer_email",
+  "depature_port",
+  "arrival_port",
+  "tiket_type",
+  "trip_date",
+  "total_amount",
+  "total_passengers"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_nwhs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "depature_port",
+   "fieldtype": "Data",
+   "label": "Depature Port"
+  },
+  {
+   "fieldname": "arrival_port",
+   "fieldtype": "Data",
+   "label": "Arrival Port"
+  },
+  {
+   "fieldname": "tiket_type",
+   "fieldtype": "Select",
+   "label": "Ticket Type"
+  },
+  {
+   "fieldname": "trip_date",
+   "fieldtype": "Date",
+   "label": "Trip Date"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "total_passengers",
+   "fieldtype": "Int",
+   "label": "Total Passengers"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-18 14:44:27.952612",
+ "modified_by": "Administrator",
+ "module": "FISA Ticketing",
+ "name": "FISA PAYMENT",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
