@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-08-21 00:17:44.867200",
@@ -15,20 +16,21 @@
   "phone_number",
   "email",
   "gender",
+  "voyage_no",
+  "status",
   "column_break_",
-  "total_passengers",
   "ticket_type",
-  "category",
+  "passenger_type",
   "travel_date",
   "departure_port",
   "arrival_port",
+  "total_passenger",
   "column_break_vqle",
   "ticket_price",
   "payment_status",
   "total_amount",
   "naming_series",
   "customer_id",
-  "remaining_seats",
   "payment_token",
   "card_number",
   "expirre_date",
@@ -62,7 +64,6 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "First Name",
-   "options": "Or link to Customer doctype",
    "reqd": 1
   },
   {
@@ -80,14 +81,12 @@
    "fieldname": "dob",
    "fieldtype": "Date",
    "label": "Date Of Birth",
-   "options": "For discount logic",
    "reqd": 1
   },
   {
    "fieldname": "phone_number",
    "fieldtype": "Phone",
    "label": "Phone Number",
-   "options": "Passenger contact",
    "reqd": 1
   },
   {
@@ -109,23 +108,10 @@
    "label": "Ticket Detail"
   },
   {
-   "fieldname": "total_passengers",
-   "fieldtype": "Int",
-   "label": "Total Passengers",
-   "options": "System calculates based on child table"
-  },
-  {
    "fieldname": "ticket_type",
    "fieldtype": "Select",
    "label": "Ticket Type",
    "options": "VIP\nEconomy",
-   "reqd": 1
-  },
-  {
-   "fieldname": "category",
-   "fieldtype": "Select",
-   "label": "Category",
-   "options": "Infant\nChild\nAdult\nSenior",
    "reqd": 1
   },
   {
@@ -162,8 +148,7 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Ticket Price",
-   "options": "Auto-calculated"
+   "label": "Ticket Price"
   },
   {
    "fieldname": "payment_status",
@@ -181,17 +166,13 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Total Amount",
-   "options": "Auto-calculated"
+   "label": "Total Amount"
   },
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "in_filter": 1,
    "in_global_search": 1,
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
    "label": "Series",
    "options": "FISA.-.YY.MM.#####",
    "read_only": 1
@@ -200,13 +181,6 @@
    "fieldname": "customer_id",
    "fieldtype": "Attach Image",
    "label": "National ID/Passport"
-  },
-  {
-   "fieldname": "remaining_seats",
-   "fieldtype": "Int",
-   "in_preview": 1,
-   "label": "Remaining Seats",
-   "read_only": 1
   },
   {
    "fieldname": "payment_token",
@@ -245,12 +219,40 @@
    "fieldtype": "Table",
    "label": "Add New Passenger",
    "options": "FISA Child-table"
+  },
+  {
+   "fieldname": "passenger_type",
+   "fieldtype": "Select",
+   "label": "Passenger Type",
+   "options": "Infant\nChild\nAdult\nSenior",
+   "reqd": 1
+  },
+  {
+   "fieldname": "voyage_no",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Voyage No"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nPaid\nFailed"
+  },
+  {
+   "fieldname": "total_passenger",
+   "fieldtype": "Int",
+   "label": "Total Passenger",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-18 14:51:05.156107",
+ "modified": "2025-11-21 02:14:30.452398",
  "modified_by": "Administrator",
  "module": "FISA Ticketing",
  "name": "FISA Booking Online",
@@ -282,6 +284,7 @@
    "write": 1
   }
  ],
+ "route": "ticket",
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
