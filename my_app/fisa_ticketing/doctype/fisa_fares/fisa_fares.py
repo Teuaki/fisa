@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class FISAChildtable(Document):
+class FISAFares(Document):
 	pass

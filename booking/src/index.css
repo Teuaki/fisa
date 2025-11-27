@@ -1,0 +1,102 @@
+/* ==============================
+   Web Form Container Background
+============================== */
+.web-form-container {
+  width: 100%;
+  background: linear-gradient(135deg, #ff4d4d, #4d79ff) !important;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #000;
+}
+
+/* Title */
+.web-form-container .form-title {
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   Form Inputs
+============================== */
+.web-form-container input,
+.web-form-container select {
+  width: 100%;
+  padding: 10px 14px !important;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #cfd8e3;
+  font-size: 15px !important;
+  background: #fff;
+  color: #000;
+}
+
+.web-form-container label {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ==============================
+   Select Styling
+============================== */
+.web-form-container select {
+  font-weight: 600;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+/* Dropdown Options */
+.web-form-container select option {
+  font-weight: 600;
+  padding: 6px 10px !important;
+  color: #000 !important;
+}
+
+/* Ticket Type Colors */
+.web-form-container select option[value="VIP"]      { background: #FFD700 !important; color: #000 !important; }
+.web-form-container select option[value="Economy"]  { background: #800000 !important; color: #fff !important; }
+.web-form-container select option[value="Infant"]   { background: #FFC0CB !important; color: #000 !important; }
+.web-form-container select option[value="Child"]    { background: #FFFF00 !important; color: #000 !important; }
+.web-form-container select option[value="Adult"]    { background: #0000FF !important; color: #fff !important; }
+.web-form-container select option[value="Senior"]   { background: #1E90FF !important; color: #fff !important; }
+
+/* Port Colors */
+.web-form-container select option[value="Nuku'alofa"] { background: #FF6347 !important; color: #fff !important; }
+.web-form-container select option[value="Nomuka"]      { background: #40E0D0 !important; color: #000 !important; }
+.web-form-container select option[value="Ha'afeva"]    { background: #FF8C00 !important; color: #fff !important; }
+.web-form-container select option[value="Pangai"]      { background: #9370DB !important; color: #fff !important; }
+.web-form-container select option[value="Vava'u"]      { background: #3CB371 !important; color: #fff !important; }
+
+/* Submit Button */
+.web-form-container button {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.web-form-container button:hover {
+  background: #333;
+}
+
+/* Status Message */
+.status-message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
