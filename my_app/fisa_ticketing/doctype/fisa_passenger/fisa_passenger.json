@@ -7,7 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "passengers_details",
-  "full_name",
+  "first_name",
+  "last_name",
   "passenger_dob",
   "category",
   "gender",
@@ -21,12 +22,6 @@
    "fieldname": "passengers_details",
    "fieldtype": "Section Break",
    "label": "Passengers Details"
-  },
-  {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Full Name"
   },
   {
    "fieldname": "category",
@@ -74,13 +69,24 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "DOB"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-11-27 23:42:31.527405",
+ "modified": "2025-11-30 16:43:26.339954",
  "modified_by": "Administrator",
  "module": "FISA Ticketing",
  "name": "FISA Passenger",

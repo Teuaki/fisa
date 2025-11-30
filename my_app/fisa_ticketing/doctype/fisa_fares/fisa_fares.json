@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_copy": 1,
  "allow_rename": 1,
  "autoname": "format:{departure_port}-{arrival_port}-{passenger_category}-{ticket_type}",
  "creation": "2025-11-26 10:55:03.355626",
@@ -53,7 +54,8 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Ticket Type",
-   "options": "Economy\nHeilala Meal\nHeilala no Meal"
+   "options": "Economy\nVIP",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_twod",
@@ -69,9 +71,10 @@
   }
  ],
  "grid_page_length": 50,
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-27 22:36:48.702675",
+ "modified": "2025-12-01 12:31:37.817856",
  "modified_by": "Administrator",
  "module": "FISA Ticketing",
  "name": "FISA Fares",

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:8081/api/resource/FISA Booking Online";
+const API_URL = "http://192.168.25.13/api/resource/FISA Booking Online";
 
 export default function App() {
   const [step, setStep] = useState(1);
@@ -71,7 +71,7 @@ export default function App() {
     const fields = encodeURIComponent(JSON.stringify(["total_passenger"]));
 
     const res = await fetch(
-      `http://localhost:8081/api/resource/FISA Booking Online?filters=${filters}&fields=${fields}`
+      `http://192.168.25.13/api/resource/FISA Booking Online?filters=${filters}&fields=${fields}`
     );
 
     const data = await res.json();
@@ -116,7 +116,7 @@ export default function App() {
     const docName = `${departure}-${arrival}-${category}-${ticketType}`;
 
     const res = await fetch(
-      `http://localhost:8081/api/resource/FISA Fares/${encodeURIComponent(
+      `http://192.168.25.13/api/resource/FISA Fares/${encodeURIComponent(
         docName
       )}`
     );

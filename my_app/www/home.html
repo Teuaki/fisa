@@ -1,323 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>FISA Ferry Schedule – MV 'Otuanga'ofa</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-html {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  color: #111;
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
-  background-size: cover;
-}
+    <meta charset="UTF-8">
+    <title>Friendly Island Shipping Agency – Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/* Navigation Bar */
-nav {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-}
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  margin: 0 25px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s;
-}
-nav ul li a:hover {
-  color: #60a5fa;
-}
+    <style>
+        :root {
+            --teal: #00a7b5;
+            --teal-dark: #008395;
+            --nav-text: #ffffff;
+            --hero-btn: #003b6f;
+            --hero-btn-hover: #005098;
+            --body-bg: #f4f6f8;
+        }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 60px 20px 30px;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
-}
-header h1 {
-  font-size: 2.8rem;
-  margin: 0;
-}
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Main container style (shared) */
-.section-box {
-  background: rgba(255,255,255,0.96);
-  margin: 30px auto;
-  border-radius: 18px;
-  max-width: 1200px;
-  padding: 30px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--body-bg);
+            color: #222;
+        }
 
-/* Section headings */
-.section-box h2 {
-  text-align: center;
-  color: #1e3a8a;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-/* Schedule Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1rem;
-  border-radius: 10px;
-  overflow: hidden;
-}
-th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
-}
-th {
-  background: #1e3a8a;
-  color: white;
-  font-weight: 600;
-}
-tr:nth-child(even) {
-  background: #f3f6fa;
-}
+        /* ---------- HERO ---------- */
 
-/* Description */
-.schedule-description {
-  margin-top: 25px;
-  text-align: center;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #222;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
+        .hero {
+            position: relative;
+            min-height: 320px;
+            background-image: url("https://www.webmar.com/wordtest/wp-content/uploads/2020/04/Otuanga-Ofa.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
 
-/* Booking Button */
-.booking-btn {
-  text-align: center;
-  margin-top: 25px;
-}
-.btn-book {
-  display: inline-block;
-  background: #1e3a8a;
-  color: #fff;
-  padding: 12px 35px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: 0.3s;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-}
-.btn-book:hover {
-  background: #0f172a;
-  transform: translateY(-2px);
-}
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.15),
+                rgba(0,0,0,0.35)
+            );
+            pointer-events: none;
+        }
 
-/* Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 18px;
-  margin-top: 40px;
-}
-.gallery img {
-  width: 100%;
-  height: 250px;
-  border-radius: 18px;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-}
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 18px 20px 24px;
+        }
 
-/* Travel Info Section */
-.travel-info {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #222;
-  max-width: 950px;
-  margin: 0 auto;
-}
-.travel-info h3 {
-  color: #1e3a8a;
-  margin-top: 20px;
-}
+        .hero-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
 
-/* News Section */
-.news-section p {
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-/* Footer */
-footer {
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  text-align: center;
-  padding: 30px 15px;
-  margin-top: 50px;
-}
-footer h3 {
-  margin-bottom: 10px;
-}
-footer p {
-  margin: 4px 0;
-  font-size: 15px;
-}
+        .logo-wrap img {
+            height: 70px;
+        }
 
-/* Responsive */
-@media (max-width: 700px) {
-  header h1 { font-size: 2rem; }
-  table { font-size: 14px; }
-  nav ul li { margin: 0 10px; }
-  .btn-book { font-size: 1rem; padding: 10px 25px; }
-}
-</style>
+        .logo-text {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .top-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 4px 8px;
+            border-radius: 3px;
+            border: none;
+            min-width: 180px;
+        }
+
+        .search-bar button {
+            padding: 4px 10px;
+            border-radius: 3px;
+            border: none;
+            background: var(--hero-btn);
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background: var(--hero-btn-hover);
+        }
+
+        .login-link a {
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 3px;
+            border: 1px solid #fff;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .login-link a:hover {
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .hero-btn {
+            padding: 10px 28px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-size: 13px;
+            border: 1px solid #fff;
+            background: var(--hero-btn);
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-btn:hover {
+            background: var(--hero-btn-hover);
+        }
+
+        /* ---------- NAV BAR ---------- */
+
+        .main-nav {
+            position: relative;
+            z-index: 2;
+            background: var(--teal);
+            border-radius: 4px 4px 0 0;
+            margin-top: 32px;
+            overflow: hidden;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 10px 26px;
+            color: var(--nav-text);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .nav-item a:hover,
+        .nav-item a.active {
+            background: var(--teal-dark);
+        }
+
+        /* ---------- MAIN CONTENT ---------- */
+
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+            margin-top: -4px;
+            padding: 30px 25px 40px;
+        }
+
+        .tiles-grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+            gap: 22px;
+        }
+
+        .tile {
+            background: var(--teal);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tile a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tile img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .tile-caption {
+            padding: 10px 12px;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        /* ---------- SCHEDULE SECTION ---------- */
+
+        .schedule-section {
+            margin-top: 40px;
+        }
+
+        .schedule-header {
+            text-align: center;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .schedule-meta {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #ccc;
+            padding: 6px 8px;
+            text-align: center;
+        }
+
+        .schedule-table thead {
+            background: #eee;
+            font-weight: 600;
+        }
+
+        .schedule-table tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .schedule-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        /* ---------- TRAVEL INFO & BOOKING INFO ---------- */
+
+        .info-section {
+            margin-top: 40px;
+        }
+
+        .info-section h2 {
+            text-align: center;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+
+        .info-section h3 {
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .info-section p {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .info-section ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .info-section li {
+            margin-bottom: 4px;
+        }
+
+        /* ---------- FEEDBACK SECTION ---------- */
+
+        .feedback-section {
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 24px;
+        }
+
+        .feedback-section h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .feedback-section p {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .feedback-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .feedback-form .field {
+            margin-bottom: 12px;
+        }
+
+        .feedback-form label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form textarea {
+            width: 100%;
+            padding: 6px 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+        }
+
+        .feedback-form textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .feedback-form button {
+            margin-top: 6px;
+            padding: 8px 16px;
+            border-radius: 3px;
+            border: none;
+            background: var(--teal);
+            color: #fff;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background: var(--teal-dark);
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+
+        @media (max-width: 992px) {
+            .tiles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-bottom {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .hero-buttons {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .top-right {
+                align-items: flex-start;
+            }
+
+            .tiles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-item a {
+                padding: 10px 18px;
+            }
+
+            .logo-wrap img {
+                height: 56px;
+            }
+
+            .logo-text {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
-<nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#travel-info">Travel Information</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <!-- HERO + NAV -->
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-top">
+                <div class="logo-wrap">
+                    <img src="https://exploretonga.online/wp-content/uploads/2024/10/FISA-logo-300x300.jpg" alt="Friendly Island Shipping Logo">
+                    <span class="logo-text">FRIENDLY ISLAND SHIPPING AGENCY</span>
+                </div>
 
-<!-- Header -->
-<header id="home">
-  <h1>MV 'Otuanga'ofa Schedule</h1>
-  <p>Voyage No. 844 – Friendly Island Shipping Agency (FISA)</p>
-</header>
+                <div class="top-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button type="button">Search</button>
+                    </div>
+                    <div class="login-link">
+                        <!-- login straight to Frappe app -->
+                        <a href="/app">Login</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Schedule Section -->
-<section class="section-box" id="schedule">
-  <h2>SCHEDULE FOR MV 'OTUANGA'OFA – VOY. 844</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Port of Call</th>
-        <th>ETA (Arrival)</th>
-        <th>Time</th>
-        <th>ETD (Departure)</th>
-        <th>Time</th>
-      </tr>
-    </thead>
-    <tbody>
-       <tr><td>Nuku'alofa</td><td>MON 8.12.2025</td><td>6:00PM</td><td></td><td></td></tr>
-    <tr><td>Nomuka</td><td>TUE 9.12.2025</td><td>12:00AM</td><td>TUE 9.12.2025</td><td>3:00AM</td></tr>
-    <tr><td>Ha'afeva</td><td>TUE 9.12.2025</td><td>5:00AM</td><td>TUE 9.12.2025</td><td>7:00AM</td></tr>
-    <tr><td>Pangai</td><td>TUE 9.12.2025</td><td>9:00AM</td><td>TUE 9.12.2025</td><td>12:00PM</td></tr>
-    <tr><td>Vava'u</td><td>TUE 9.12.2025</td><td>7:00PM</td><td>THU 11.12.2025</td><td>9:00AM</td></tr>
-    <tr><td>Pangai</td><td>FRI 12.12.2025</td><td>4:00PM</td><td>FRI 12.12.2025</td><td>7:00PM</td></tr>
-    <tr><td>Ha'afeva</td><td>FRI 12.12.2025</td><td>9:00PM</td><td>FRI 12.12.2025</td><td>11:00PM</td></tr>
-    <tr><td>Nomuka</td><td>SAT 13.12.2025</td><td>1:00AM</td><td>SAT 13.12.2025</td><td>3:00AM</td></tr>
-    <tr><td>Nuku'alofa</td><td>SAT 13.12.2025</td><td>8:00AM</td><td></td><td></td></tr>
-    </tbody>
-  </table>
+            <div class="hero-bottom">
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="active">Home</a></li>
+                        <li class="nav-item"><a href="#booking-info">Booking Information</a></li>
+                        <li class="nav-item"><a href="#schedule">Schedule</a></li>
+                        <li class="nav-item"><a href="#travel-info">Travel Info</a></li>
+                        <li class="nav-item"><a href="#feedback">Feedback</a></li>
+                        <li class="nav-item"><a href="#feedback">Contact</a></li>
+                    </ul>
+                </nav>
 
-  <div class="schedule-description">
-    <p>
-      MV 'Otuanga'ofa connects Tonga's major islands with safe and reliable ferry services.
-      Passengers can enjoy scenic ocean views, onboard amenities, and convenient schedules.
-      Whether traveling for business or leisure, our ferry ensures your journey is smooth,
-      affordable, and memorable.
-    </p>
-  </div>
+                <div class="hero-buttons">
+                    <!-- Manage Booking removed, Book Now goes to booking page -->
+                    <a href="booking" class="hero-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <div class="booking-btn">
-    <a href="/booking" class="btn-book">Book Your Ticket</a>
-  </div>
+    <!-- MAIN CONTENT -->
+    <main class="page">
 
-  <div class="gallery">
-    <img src="https://api.maritimeoptima.com/vesselpictures/9570357" alt="MV 'Otuanga'ofa at sea">
-    <img src="https://tongapocketguide.com/wp-content/uploads/2023/12/Otuangaofa-Ferry-Transport-Tongatapu-Wharf-MUST-CREDIT-tongapocketguide.com--1024x768.jpg" alt="MV 'Otuanga'ofa at Tongatapu Wharf">
-  </div>
-</section>
+        <!-- TILES -->
+        <section class="tiles-grid">
+            <article class="tile">
+                <a href="#">
+                    <img src="https://tongapocketguide.com/wp-content/uploads/2023/12/Ferry-MV-%E2%80%98Otuangaofa-2-MUST-CREDIT-tongapocketguide.com-.jpg" alt="Charters">
+                    <div class="tile-caption">CHARTERS</div>
+                </a>
+            </article>
 
-<!-- Travel Information Section -->
-<section class="section-box" id="travel-info">
-  <h2>About MV 'Otuanga'ofa</h2>
-  <div class="travel-info">
-    <p>
-      MV <strong>'Otuanga'ofa</strong> is the main inter-island ferry operated by the
-      <strong>Friendly Island Shipping Agency (FISA)</strong), serving routes across
-      Tonga’s island groups — Tongatapu, Ha’apai, and Vava’u.
-    </p>
+            <article class="tile">
+                <!-- Bookings tile renamed & linked to Booking Information -->
+                <a href="#booking-info">
+                    <img src="https://tongapocketguide.com/wp-content/uploads/2023/12/Taufaahau-Wharf-Otuangaofa-Ferry-Haapai-MUST-CREDIT-tongapocketguide.com--900x675.jpg" alt="Booking Information">
+                    <div class="tile-caption">BOOKING INFORMATION</div>
+                </a>
+            </article>
 
-    <h3>Vessel Overview</h3>
-    <p>
-      Built to handle both passengers and cargo, MV 'Otuanga'ofa is equipped with
-      modern safety and navigation systems. The vessel offers economy and VIP
-      seating areas, sleeping cabins, onboard catering, and rest areas to ensure
-      passenger comfort on longer voyages.
-    </p>
+            <article class="tile">
+                <a href="#">
+                    <img src="https://www.kanivatonga.co.nz/wp-content/uploads/2023/02/MV-Otuangaofa-copy-919x658.jpg" alt="Gallery">
+                    <div class="tile-caption">GALLERY</div>
+                </a>
+            </article>
 
-    <h3>Capacity & Services</h3>
-    <ul>
-      <li>Passenger capacity: approximately 400</li>
-      <li>Vehicle deck for cars and light trucks</li>
-      <li>Modern safety equipment and trained crew</li>
-      <li>Air-conditioned VIP Lounge and economy seating</li>
-      <li>Snack bar and onboard facilities</li>
-    </ul>
+            <article class="tile">
+                <a href="#travel-info">
+                    <img src="https://thefamilywithoutborders.com/wp-content/uploads/2014/07/02_ferry-to-vavau-tongatapu-tonga.jpg" alt="Travel Information">
+                    <div class="tile-caption">TRAVEL INFORMATION</div>
+                </a>
+            </article>
+        </section>
 
-    <h3>Important Travel Tips</h3>
-    <ul>
-      <li>Please arrive at least 1 hour before departure for boarding and ticket verification.</li>
-      <li>Carry valid ID and booking confirmation at all times.</li>
-      <li>Schedules are subject to weather and operational changes.</li>
-    </ul>
-  </div>
-</section>
+        <!-- BOOKING INFORMATION SECTION -->
+        <section id="booking-info" class="info-section">
+            <h2>Booking Information</h2>
 
-<!-- News Section -->
-<section class="section-box news-section" id="news">
-  <h2>News & Updates</h2>
-  <p>
-    Stay tuned for the latest voyage announcements, weather alerts, and maintenance updates
-    related to MV 'Otuanga'ofa and FISA ferry operations. Regular updates will be shared here
-    to keep all passengers informed of travel changes and safety notices.
-  </p>
-</section>
+            <p>
+                To make travelling with Friendly Islands Shipping Agency (FISA) as smooth as possible,
+                please take note of the following booking guidelines.
+            </p>
 
-<!-- Footer / Contact -->
-<footer id="contact">
-  <h3>Contact Us</h3>
-  <p><strong>Friendly Island Shipping Agency (FISA)</strong></p>
-  <p>Email: info@fisa.to | Phone: 23468</p>
-  <p>Address: Nuku'alofa, Tongatapu, Tonga</p>
-</footer>
+            <h3>1. Before you book</h3>
+            <ul>
+                <li>
+                    <strong>Check the schedule:</strong> Confirm the voyage number, departure date and
+                    ports of call (for example Voyage V001, departing 09/12/2025 from Nuku’alofa).
+                </li>
+                <li>
+                    <strong>Passenger details:</strong> Have full names, dates of birth and contact
+                    details ready for every passenger, including infants and children.
+                </li>
+                <li>
+                    <strong>Ticket type:</strong> Choose between Economy or VIP. VIP includes extra
+                    comfort and seating; Economy is the standard cabin class.
+                </li>
+            </ul>
+
+            <h3>2. During the booking</h3>
+            <ul>
+                <li>
+                    <strong>Passenger categories:</strong> Fares depend on age. Infants (1–3 years),
+                    Children (4–12 years), Adults (13–64 years) and Seniors (65+) are priced according
+                    to FISA’s current fare table.
+                </li>
+                <li>
+                    <strong>Baggage:</strong> Each passenger may bring a small carry‑on (up to about 7&nbsp;kg).
+                    Heavier bags, food boxes or chilly bins must be checked in as baggage/cargo at the wharf
+                    and are charged per piece (travellers report around TOP&nbsp;$30 per bag or box).
+                </li>
+                <li>
+                    <strong>Payment:</strong> Bookings are only confirmed once payment is received and
+                    a ticket or booking reference number has been issued.
+                </li>
+            </ul>
+
+            <h3>3. Check‑in at the wharf</h3>
+            <ul>
+                <li>Arrive at the wharf at least <strong>1–2 hours</strong> before scheduled departure.</li>
+                <li>Bring your ticket / booking reference and a valid photo ID.</li>
+                <li>Baggage or cargo must be checked in at the baggage counter before boarding.</li>
+                <li>Check‑in may close 30–60 minutes before sailing; late passengers risk losing their booking.</li>
+            </ul>
+
+            <h3>4. Changes, cancellations and no‑shows</h3>
+            <ul>
+                <li>Changes to dates, route or passenger names may incur a fee and depend on seat availability.</li>
+                <li>Cancellations may attract a partial refund or credit according to FISA’s refund policy.</li>
+                <li>If you do not show up for departure without cancelling in advance, the ticket may be
+                    <strong>non‑refundable</strong>.</li>
+            </ul>
+
+            <h3>5. Special assistance</h3>
+            <ul>
+                <li>Contact FISA before booking if you need help for elderly passengers or those with
+                    reduced mobility, wheelchair space, or travel for unaccompanied minors.</li>
+                <li>The crew must be informed in advance of any medical conditions that could affect travel.</li>
+            </ul>
+
+            <h3>6. Dangerous goods and restricted items</h3>
+            <ul>
+                <li>Dangerous goods cannot be booked as normal baggage on a passenger ticket.</li>
+                <li>Fuel, large gas cylinders, firearms, ammunition and other hazardous items must be declared and
+                    may only travel as approved cargo under maritime safety rules.</li>
+            </ul>
+
+            <p><em>
+                This information is a general guide only. Always check the latest FISA terms and conditions printed
+                on your ticket or displayed at the ticket office.
+            </em></p>
+        </section>
+
+        <!-- SCHEDULE SECTION -->
+        <section id="schedule" class="schedule-section">
+            <h2 class="schedule-header">Schedule for MV &lsquo;Otuanga&rsquo;ofa</h2>
+            <div class="schedule-meta">
+                <strong>Voyage:</strong> V001 &nbsp; | &nbsp;
+                <strong>Departure Date:</strong> 09/12/2025
+            </div>
+
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Port of Call</th>
+                        <th colspan="2">ETA (Arrival)</th>
+                        <th colspan="2">ETD (Departure)</th>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nuku'alofa</td>
+                        <td></td>
+                        <td></td>
+                        <td>09/12/2025</td>
+                        <td>6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Nomuka</td>
+                        <td>10/12/2025</td>
+                        <td>12:00 AM</td>
+                        <td>10/12/2025</td>
+                        <td>3:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Ha'afeva</td>
+                        <td>10/12/2025</td>
+                        <td>5:00 AM</td>
+                        <td>10/12/2025</td>
+                        <td>7:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Pangai</td>
+                        <td>10/12/2025</td>
+                        <td>9:00 AM</td>
+                        <td>10/12/2025</td>
+                        <td>12:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Vava'u</td>
+                        <td>10/12/2025</td>
+                        <td>7:00 PM</td>
+                        <td>13/12/2025</td>
+                        <td>9:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Pangai</td>
+                        <td>13/12/2025</td>
+                        <td>4:00 PM</td>
+                        <td>13/12/2025</td>
+                        <td>7:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Ha'afeva</td>
+                        <td>13/12/2025</td>
+                        <td>9:00 PM</td>
+                        <td>13/12/2025</td>
+                        <td>11:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Nomuka</td>
+                        <td>14/12/2025</td>
+                        <td>1:00 AM</td>
+                        <td>14/12/2025</td>
+                        <td>3:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Nuku'alofa</td>
+                        <td>14/12/2025</td>
+                        <td>8:00 AM</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- TRAVEL INFORMATION SECTION -->
+        <section id="travel-info" class="info-section">
+            <h2>Travel Information – Travelling with FISA</h2>
+
+            <p>
+                Travelling specifically with FISA (Friendly Islands Shipping Agency).
+                The following outlines the FISA passenger allowance and identifies items that are
+                prohibited or restricted.
+            </p>
+
+            <h3>Baggage on the ferries</h3>
+
+            <ul>
+                <li>
+                    <strong>Carry‑on:</strong>
+                    Usually 1 small bag up to about 7&nbsp;kg you can take with you onboard.
+                </li>
+                <li>
+                    <strong>Checked baggage / cargo:</strong>
+                    <ul>
+                        <li>
+                            Bigger or heavier bags, food boxes, chilly bins, etc. must be checked in
+                            as baggage/cargo in crates at the wharf.
+                        </li>
+                        <li>
+                            Travellers report paying per piece (for example around TOP&nbsp;$30 per bag/box).
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Dangerous / risky items on ferries</h3>
+
+            <p>
+                Because of maritime safety and customs rules, you generally cannot take the following
+                as normal passenger baggage on a FISA ferry:
+            </p>
+
+            <ul>
+                <li>Fuel containers, large gas cylinders, explosives, fireworks</li>
+                <li>Large quantities of chemicals, paints, or other flammable liquids</li>
+                <li>Firearms and ammunition (without proper permits and declaration)</li>
+            </ul>
+
+            <p>
+                These must go as properly declared dangerous goods or cargo, if they are allowed at
+                all. FISA and the port authority follow national shipping safety rules and can refuse
+                items that are unsafe.
+            </p>
+
+            <p>
+                <strong>Also note:</strong> ferries don’t operate on Sundays by law in Tonga
+                (Sabbath rest law), so all shipping of baggage/cargo is Monday–Saturday.
+            </p>
+        </section>
+
+        <!-- FEEDBACK SECTION -->
+        <section id="feedback" class="feedback-section">
+            <h2>Feedback</h2>
+            <p>We would love to hear about your experience with Friendly Island Shipping Agency.</p>
+
+            <form class="feedback-form">
+                <div class="field">
+                    <label for="fb-name">Name</label>
+                    <input type="text" id="fb-name" name="name" placeholder="Your name">
+                </div>
+                <div class="field">
+                    <label for="fb-email">Email</label>
+                    <input type="email" id="fb-email" name="email" placeholder="Your email">
+                </div>
+                <div class="field">
+                    <label for="fb-message">Message</label>
+                    <textarea id="fb-message" name="message" placeholder="Your feedback"></textarea>
+                </div>
+                <button type="submit">Send Feedback</button>
+            </form>
+        </section>
+
+    </main>
 
 </body>
 </html>

@@ -153,7 +153,8 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Voyage No"
+   "label": "Voyage No",
+   "reqd": 1
   },
   {
    "fieldname": "status",
@@ -203,7 +204,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-27 22:53:09.650537",
+ "modified": "2025-11-30 16:33:45.260104",
  "modified_by": "Administrator",
  "module": "FISA Ticketing",
  "name": "FISA Booking Online",
